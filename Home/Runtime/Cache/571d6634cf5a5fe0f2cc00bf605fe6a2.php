@@ -71,7 +71,7 @@ User Name:<a style="font-size:20" href="__APP__/Index/index"><?php echo ($id); ?
 <td><p>Bulletin Subject </p></td><td><input class="text" type="text" name="post_id" id="postid" onblur="JcheckPostId();"><span id="postidck"><font color="red">*</font></span></td>
 </tr>
 <tr>
-<td><p>Bulletin Content </p></td><td><TEXTAREA class="text" name="post_content" id="postcontent" onkeyup="JcheckPostContent();" cols="90" rows="8" wrap="VIRTUAL"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
+<td><p>Bulletin Content </p></td><td><TEXTAREA class="text" name="post_content" id="postcontent" onkeyup="JcheckPostContent();" cols="60" rows="8" wrap="VIRTUAL"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
 </tr>
 <tr>
 <td><input type="submit" value="Submit"></td>
@@ -118,7 +118,7 @@ Reply List has <span class="pp"><?php echo ($post["level"]); ?></span> entries</
 
 <div class="tg" id="tg<?php echo ($post["post_id"]); ?>">
 <form  onsubmit="return JcheckReplyContent(<?php echo ($post["post_id"]); ?>);" method="post" action="__APP__/Post/reply">
-<textarea class="text"  id="tx<?php echo ($post["post_id"]); ?>" name="reply_content" cols="85" rows="8" wrap="VIRTUAL" > </textarea><span id="ck<?php echo ($post["post_id"]); ?>"><font 
+<textarea class="text"  id="tx<?php echo ($post["post_id"]); ?>" name="reply_content" cols="55" rows="8" wrap="VIRTUAL" > </textarea><span id="ck<?php echo ($post["post_id"]); ?>"><font 
 color=red>*</font></span>
 </br>
 <input type="hidden" name="belong" value="<?php echo ($post["post_id"]); ?>">

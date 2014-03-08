@@ -71,7 +71,7 @@ User Name:<a style="font-size:20" href="__APP__/Index/index"><{$id}></a><{$pwd}>
 <td><p>Bulletin Subject </p></td><td><input class="text" type="text" name="post_id" id="postid" onblur="JcheckPostId();"><span id="postidck"><font color="red">*</font></span></td>
 </tr>
 <tr>
-<td><p>Bulletin Content </p></td><td><TEXTAREA class="text" name="post_content" id="postcontent" onkeyup="JcheckPostContent();" cols="90" rows="8" wrap="VIRTUAL"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
+<td><p>Bulletin Content </p></td><td><TEXTAREA class="text" name="post_content" id="postcontent" onkeyup="JcheckPostContent();" cols="60" rows="8" wrap="VIRTUAL"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
 </tr>
 <tr>
 <td><input type="submit" value="Submit"></td>
@@ -125,7 +125,7 @@ author：<span class="pp"><{$reply.reply_author}></span>	Date：<span class="pp"
 
 <div class="tg" id="tg<{$post.post_id}>">
 <form  onsubmit="return JcheckReplyContent(<{$post.post_id}>);" method="post" action="__APP__/Post/reply">
-<textarea class="text"  id="tx<{$post.post_id}>" name="reply_content" cols="85" rows="8" wrap="VIRTUAL" > </textarea><span id="ck<{$post.post_id}>"><font 
+<textarea class="text"  id="tx<{$post.post_id}>" name="reply_content" cols="55" rows="8" wrap="VIRTUAL" > </textarea><span id="ck<{$post.post_id}>"><font 
 color=red>*</font></span>
 </br>
 <input type="hidden" name="belong" value="<{$post.post_id}>">
