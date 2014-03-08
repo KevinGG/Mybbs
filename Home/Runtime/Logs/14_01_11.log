@@ -1,0 +1,93 @@
+[ 2014-01-11T07:18:29+08:00 ] 127.0.0.1 /index.php/Show/main
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001453s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001579s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `show` [ RunTime:0.003520s ]
+ERR: Table 'mybbs.show' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `show`
+SQL: select count(*) from post  [ RunTime:0.001748s ]
+SQL: select * from post order by post_date desc limit 0,5 [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `reply` [ RunTime:0.003855s ]
+SQL: select count(*) from reply where belong=22 [ RunTime:0.000425s ]
+SQL: SELECT * FROM `reply` WHERE ( belong=22 ) ORDER BY reply_date desc  [ RunTime:0.000322s ]
+SQL: select count(*) from reply where belong=21 [ RunTime:0.000225s ]
+SQL: SELECT * FROM `reply` WHERE ( belong=21 ) ORDER BY reply_date desc  [ RunTime:0.000259s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Web\SaeMybbs\Home\Lib\Action\ShowAction.class.php 第 81 行.
+SQL: select count(*) from reply where belong=20 [ RunTime:0.000214s ]
+SQL: SELECT * FROM `reply` WHERE ( belong=20 ) ORDER BY reply_date desc  [ RunTime:0.000255s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Web\SaeMybbs\Home\Lib\Action\ShowAction.class.php 第 81 行.
+SQL: select count(*) from reply where belong=19 [ RunTime:0.000219s ]
+SQL: SELECT * FROM `reply` WHERE ( belong=19 ) ORDER BY reply_date desc  [ RunTime:0.000269s ]
+SQL: select count(*) from reply where belong=18 [ RunTime:0.000215s ]
+SQL: SELECT * FROM `reply` WHERE ( belong=18 ) ORDER BY reply_date desc  [ RunTime:0.000290s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Web\SaeMybbs\Home\Lib\Action\ShowAction.class.php 第 81 行.
+NOTIC: [8] Use of undefined constant main - assumed 'main' D:\Web\SaeMybbs\Home\Lib\Action\ShowAction.class.php 第 96 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001783s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001898s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: pwd D:\Web\SaeMybbs\Home\Runtime\Cache\571d6634cf5a5fe0f2cc00bf605fe6a2.php 第 64 行.
+NOTIC: [8] Undefined variable: page D:\Web\SaeMybbs\Home\Runtime\Cache\571d6634cf5a5fe0f2cc00bf605fe6a2.php 第 87 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.030942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031052s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001140s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001185s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001042s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004879s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001443s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001561s ]
+
+[ 2014-01-11T07:18:31+08:00 ] 127.0.0.1 /index.php/Show/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000556s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Web\SaeMybbs\Home\Lib\Action\ShowAction.class.php 第 12 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000580s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000667s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005503s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000385s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000418s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000318s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001768s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000494s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2014-01-11T07:33:25+08:00 ] 127.0.0.1 /index.php/Show/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000553s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Web\SaeMybbs\Home\Lib\Action\ShowAction.class.php 第 12 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000560s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000619s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.004930s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004995s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000364s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000357s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000283s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001594s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000491s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000552s ]
+

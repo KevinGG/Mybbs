@@ -1,0 +1,72 @@
+﻿<?php
+class ShowModel extends Model{
+
+    //统计当前留言总数
+	public function countList ($table,$where="")
+	{
+		$sql = "select count(*) from $table $where";		
+		$re  = $this->query($sql);
+		return $re[0]['count(*)'] ? $re[0]['count(*)'] : 0;
+	}
+    //获得留言列表
+	public function getList($table,$where=""){
+	    $sql = "select * from $table $where";
+		$re = $this->query($sql);
+		return $re;
+	}
+
+   public function deletePost($post_id){
+       $sql="delete from post where post_id=".$post_id;
+	   $re= $this->query($sql);
+	   if($re!==false){
+	   $sql="delete from reply where belong=".$post_id;
+	   $re=$this->query($sql);
+	   }
+	   return $re;
+   }
+ 
+   public function deleteReply($reply_id){
+       $sql="delete from reply where reply_id=".$reply_id;
+	   $re=$this->query($sql);   
+   }
+   public function getSingle($sql){
+      $re=$this->query($sql);
+	  return $re;
+   }
+
+  /* public function getpwd($id){
+   $sql="select * from userlist where id='$id'";
+   $re=$this->query($sql);
+   return $re[0]['password'];
+   }
+  */
+  //find single user
+  public function findSingleUser($userId){
+  $re=$this->query("select * from userlist where id = '$userId'");
+  return $re;
+  }
+	//get msg list
+	public function msgList($id){
+	$re=$this->query("select * from message where user_to='$id' order by time desc");
+	return $re;
+	}
+
+	//read a msg
+	public function readMsg($msgId){
+	$re=$this->query("select * from message where message_id='$msgId'");
+	return $re;
+	}
+
+	//update a msg read state
+	public function setRead($msgId){
+	$re=$this->query("update message set abcd=1 where message_id='$msgId'");
+	return $re;
+	}
+
+	//ban List
+	public function banList(){
+	$re=$this->query("select * from userlist where authority=3");
+	}
+
+}
+?>

@@ -1,0 +1,150 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Bulletin</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+<load href="__PUBLIC__/javascript/jquery-1.9.0.min.js"/>
+<load href="__PUBLIC__/javascript/Jfunctions.js"/>
+<script type="text/javascript">
+function Jslidefun(id){
+	$('#tg'+id).slideToggle("slow");
+}
+$(document).ready(function(){
+	$(document).scrollTop(<{$pos}>);
+});
+
+$(document).scroll(function(){
+  var pos=$(document).scrollTop();
+  var docH=$(document).height();
+  var winH=document.body.clientHeight;
+  var relH=docH-winH;
+  ajpos(pos);
+  if(pos>=relH){
+  	if(<{$row}>><{$crow}>){
+  	 $("#loading").html("Loading...");
+  	 ajload(pos);
+  	}
+  	else{
+  	 $("#loading").html("No earlier bulletins!");
+  	}
+  }
+}
+);
+
+function ajload(pos){ 
+	//alert(pos);
+   $.ajax({type:"get",data:'pos='+pos,url:"__APP__/Show/dynamicLoad",
+		beforeSend:function(XMLHttpRequest){},
+		success:function(data, textStatus){
+			if(data.trim()=="1"){
+				if(<{$row}>><{$crow}>){
+				window.location.href="__APP__/Show/main";
+			    }
+			}
+		},
+complete: function(XMLHttpRequest, textStatus){},
+error:function(){}});
+
+}
+
+function ajpos(pos){ 
+	//alert(pos);
+   $.ajax({type:"get",data:'pos='+pos,url:"__APP__/Show/posSet",
+		beforeSend:function(XMLHttpRequest){},
+		success:function(data, textStatus){},
+complete: function(XMLHttpRequest, textStatus){},
+error:function(){}});
+
+}
+
+
+</script>
+</head>
+<body>
+User Name:<a style="font-size:20" href="__APP__/Index/index"><{$id}></a><{$pwd}><input type="button" value="Log out" onclick="window.location.href='__APP__/Index/logout'"><input type="button" value="Modify password" onclick="window.location.href='__APP__/Show/changepwd'"><input type="button" value="msg" onclick="window.location.href='__APP__/Show/msg'"><if condition="($auth eq 0)"><input type="button" value="admin panel" onclick="window.location.href='__APP__/Show/toAdmin'"></if>
+<div class="box">
+<!--新留言-->
+<div class="sendPost">
+<form name="postForm" method="post" action="__APP__/Post/sendPost" onsubmit="return JcheckPostAll();">
+<table>
+<tr>
+<td><p>Bulletin Subject </p></td><td><input class="text" type="text" name="post_id" id="postid" onblur="JcheckPostId();"><span id="postidck"><font color="red">*</font></span></td>
+</tr>
+<tr>
+<td><p>Bulletin Content </p></td><td><TEXTAREA class="text" name="post_content" id="postcontent" onkeyup="JcheckPostContent();" cols="90" rows="8" wrap="VIRTUAL"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
+</tr>
+<tr>
+<td><input type="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
+</div>
+<!-- -->
+<!-- 显示留言信息 默认根据时间排序 -->
+<div class="postbg">
+<span class="pp2">
+<!--取消分页
+<td colspan="6"><{$page}></td>
+-->
+</span>
+</br>
+<div class="post">
+<volist name="post" id="post">
+Subject:<span class="pp"><{$post.post_name}></span>
+<span style=float:right>
+<if condition="($post.hasAuth eq 0)">
+<a href='__APP__/Show/deletePost?post_id=<{$post.post_id}>'> Delete</a> |
+<a href='__APP__/Show/modifyPost?post_id=<{$post.post_id}>'> Modify</a> |
+</if>
+<a href="javascript:Jslidefun(<{$post.post_id}>)"> Reply</a>
+</span>
+</br>
+Author：<span class="pp"><{$post.post_author}></span>		Date：<span class="pp"><{$post.post_date}></span> 
+</br> 
+<{$post.post_content}>
+</br>
+<div class="postbg">
+<img src="__PUBLIC__/img/cut.jpg" class="cutline"></img>
+Reply List has <span class="pp"><{$post.level}></span> entries</br>
+<img src="__PUBLIC__/img/cut.jpg" class="cutline"></img>
+<volist name="post['reply']" id="reply">
+author：<span class="pp"><{$reply.reply_author}></span>	Date：<span class="pp"><{$reply.reply_date}></span>
+<span style=float:right>
+<if condition="($reply.hasAuth eq 0)">
+<a href='__APP__/Show/deleteReply?reply_id=<{$reply.reply_id}>'>Delete</a> |
+<a href='__APP__/Show/modifyReply?reply_id=<{$reply.reply_id}>'>Modify</a>
+</if>
+</span>
+
+<br/>
+<{$reply.reply_content}>
+
+<img src="__PUBLIC__/img/cutinside.jpg" class="cutline"></img>
+</br>
+</volist>
+
+<div class="tg" id="tg<{$post.post_id}>">
+<form  onsubmit="return JcheckReplyContent(<{$post.post_id}>);" method="post" action="__APP__/Post/reply">
+<textarea class="text"  id="tx<{$post.post_id}>" name="reply_content" cols="85" rows="8" wrap="VIRTUAL" > </textarea><span id="ck<{$post.post_id}>"><font 
+color=red>*</font></span>
+</br>
+<input type="hidden" name="belong" value="<{$post.post_id}>">
+<input type="submit" value="Submit" >
+</form>
+</div>
+</div>
+
+<div class="cut">
+</br>
+</div>
+
+</volist>
+</div>
+<!--post -->
+</div>
+<!--postbg -->
+</div>
+<!--box -->
+<p class="pp" align="center" id="loading"></p>
+</body>
+</html>
