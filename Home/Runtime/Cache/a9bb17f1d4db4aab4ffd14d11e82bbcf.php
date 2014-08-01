@@ -1,49 +1,91 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
+
 <head>
 <META content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>Welcome</title>
+<title>Welcome to Bulletins Board</title>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/apps.css">
 <script type="text/javascript" src="__PUBLIC__/javascript/Jfunctions.js"></script>
 <script type="text/javascript" src="__PUBLIC__/javascript/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+<table class = "navigationBar">
+<tr>
+	<td>
+		<a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+	</td><td>
+		<a style="font-size:20" href="__APP__/Navigation/BB">Bulletins Board</a>
+	</td><td>
+		<a style="font-size:20" href="">About Us</a>
+	</td>
+<tr>
+</table>
+
+
+<div class = "backgroundFrame">
+<div class = "iAKworkshop">
+	Bulletins Board
+</div>
+<hr>
+
+<!--loginForm's table -->
+<div class = "mainFrame">
+<TABLE cellspacing="20px">
+<TD>
+<table>
+<form name="loginForm" action="__APP__/Post/login" method="post">
+	<th></th><th align="left">Please Login</th>
+	<tr>
+		<td style="width:70px"></td>
+		<td ><input class="text" type="text" name="username" placeholder = "User Name"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input class="text" type="password" name="userpwd" placeholder = "Password"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input class = "bigBlueBtn" type="submit" value="Login"></td>
+	</tr>
+</form>
+</table>
+</TD>
+<TD style="border-left:1px solid silver; padding-left:20px">
+	Leave your thoughts about our APPs!<br/>
+	Share your ideas！<br/>
+	Get access to newest information about all kinds of development！<br/>
+	<br/><br/>
+	<a class = "normalLink" href="__APP__/Show/register">Register Now</a>
+</TD>
+</TABLE>
+</div>
+<!-- end of LoginForm's table-->
+
+
+
+
+
+</div>
+
+
 <script type="text/javascript">
 $(document).ready(function(){
-$("#bType").text(function(){
-	if(navigator.appName!="Netscape"){
-	alert("For better user experience，please use Netscape(Chrome|firefox etc.)browsers to visit this website !");
-	window.close();
-	}
-	return navigator.appName;
+	$("#bType").text(function(){
+		if(navigator.appName!="Netscape"){
+			alert("For better user experience，please use Netscape(Chrome|firefox etc.)browsers to visit this website !");
+		window.close();
+		}
+		return navigator.appName;
 	});
-$("#bVersion").text(function(){
-    return navigator.appVersion;
+	$("#bVersion").text(function(){
+    	return navigator.appVersion;
     });
 });
 </script>
-</head>
-<body>
-Current broswer：<span id="bType">unknown</span>
-</br>
-Version: <span id="bVersion">unknown</span>
-<!--loginForm's table -->
-<div class="index">
-<div class="container" style="margin-left:200px">
-<div class="indexTop"><p size=60px>Hello</p><p>Good Choice</p></div>
-<table>
-<form name="loginForm" action="__APP__/Post/login" method="post">
-<tr>
-<td>User Name：</td><td><input class="text" type="text" name="username"></td>
-</tr>
-<tr>
-<td>Password：</td><td><input class="text" type="password" name="userpwd"></td>
-</tr>
-<tr>
-<td><input type="submit" value="Login"></td><td><input type="button" value="Register" onclick="window.location.href='__APP__/Show/register'"></td>
-</tr>
-</form>
-</table>
-<div class="footer">Welcome</div>
-</div>
-</div>
-<!-- end of LoginForm's table-->
+
+
+
+
 </body>
 </html>

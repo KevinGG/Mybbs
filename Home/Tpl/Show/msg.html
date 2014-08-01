@@ -3,34 +3,60 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>MSG</title>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/apps.css">
 <load href="__PUBLIC__/javascript/jquery-1.9.0.min.js"/>
 <load href="__PUBLIC__/javascript/Jfunctions.js"/>
 </head>
 <body>
-User Name:<a style="font-size:20" href="__APP__/Index/index"><{$id}></a><{$pwd}><input type="button" value="Log out" onclick="window.location.href='__APP__/Index/logout'"><input type="button" value="Modify password" onclick="window.location.href='__APP__/Show/changepwd'"><input type="button" value="msg" onclick="window.location.href='__APP__/Show/msg'"><if condition="($auth eq 0)"><input type="button" value="admin panel" onclick="window.location.href='__APP__/Show/toAdmin'"></if>
+<table class = "navigationBar">
+<tr>
+  <td>
+    <a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+  </td><td>
+    <a style="font-size:20" href="__APP__/Navigation/BB">Bulletinss Board</a>
+  </td><td>
+    <a style="font-size:20" href="">About Us</a>
+  </td>
+<tr>
+</table>
 
-<div class="sendPost">
+<div class = "backgroundFrame">
+<div class = "iAKworkshop">
+  <{$id}>
+</div>
+
+<hr>
+<div class = "bbNav">
+    <a style="font-size:20" href="__APP__/Index/index">Bulletinss</a><{$pwd}> | <a  href="__APP__/Show/msg">Messages</a> | <if condition="($auth eq 0)"><a href="__APP__/Show/toAdmin">Admin Panel</a> |</if>  <a href="__APP__/Show/changepwd">Modify Password</a> | <a href="__APP__/Index/logout">Log Out</a> |
+</div>
+<hr>
+
+<div class="mainFrame">
+<div class = "bulletins">
 <form name="sendMsg" method="post" action="__APP__/Post/sendMsg" onsubmit="return JcheckPostAll();">
 <table>
 <tr>
-<td><p>Send To: </p></td><td><input class="text" type="text" name="user_to" id="user_to" onblur="JcheckPostId();"><span id="postidck"><font color="red">*</font></span></td>
+<td style="width=20px"></td><td><input class="text" type="text" name="user_to" id="user_to" onblur="JcheckPostId();" placeholder="Send To:"><span id="postidck"><font color="red">*</font></span></td>
 </tr>
 <tr>
-<td><p>Msg Subject </p></td><td><input class="text" type="text" name="Msg_subject" id="Msg_subject" onblur="JcheckPostId();"><span id="postidck"><font color="red">*</font></span></td>
+<td></td><td><input class="text" type="text" name="Msg_subject" id="Msg_subject" onblur="JcheckPostId();" placeholder="New Subject"><span id="postidck"><font color="red">*</font></span></td>
 </tr>
 <tr>
-<td><p>Msg Content </p></td><td><TEXTAREA class="text" name="Msg_content" id="Msg_content" onkeyup="JcheckPostContent();" cols="90" rows="8" wrap="VIRTUAL"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
+<td></td><td><TEXTAREA class="text" name="Msg_content" id="Msg_content" onkeyup="JcheckPostContent();" cols="90" rows="8" wrap="VIRTUAL" placeholder="Message Content"></TEXTAREA></td><td><span id="postcontentck"><font color="red">*</font></span></td>
 </tr>
 <tr>
-<td><input type="submit" value="Send"></td>
+<td></td><td><input class = "bigBlueBtn" type="submit" value="Send"></td>
 </tr>
 </table>
 </form>
 </div>
 
-<Table name="MsgList" style="background-color:#ABD9E0;" border=1>
+<hr style="width:95%">
+
+<div class = "bulletins">
+<Table name="MsgList" class = "normalTable">
 <tr>
-<td>From</td><td>Subject</td><td>Content</td><td>Read?</td><td>Date</td>
+<th>From</th><th>Subject</th><th>Content</th><th>Status</th><th>Date</th><th>Operation</th>
 </tr>
 <volist name="msgList" id="ml">
 <tr>
@@ -44,10 +70,15 @@ User Name:<a style="font-size:20" href="__APP__/Index/index"><{$id}></a><{$pwd}>
 <td><img style=" width:25px;height:25px"src="__PUBLIC__/img/open.png"></td>
 </if>
 <td><{$ml.time}></td>
-<td><a href='__APP__/Show/readMsg?msgId=<{$ml.message_id}>'>read</a></td>
+<td><a class = "normalLink" href='__APP__/Show/readMsg?msgId=<{$ml.message_id}>'>read</a></td>
 </tr>
 </volist>
 </Table>
+</div>
 
+</div>
+<!--end of mainFrame-->
+</div>
+<!-- end of backgroundFrame -->
 </body>
 </html>

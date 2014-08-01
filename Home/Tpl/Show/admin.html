@@ -3,35 +3,58 @@
 <META content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>Welcome Admin!</title>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/apps.css">
 <load href="__PUBLIC__/javascript/Jfunctions.js"/>
 <load href="__PUBLIC__/javascript/jquery-1.9.0.min.js"/>
 </head>
 <body>
-User Name:<a style="font-size:20" href="__APP__/Index/index"><{$id}></a><{$pwd}><input type="button" value="Log out" onclick="window.location.href='__APP__/Index/logout'"><input type="button" value="Modify password" onclick="window.location.href='__APP__/Show/changepwd'"><input type="button" value="msg" onclick="window.location.href='__APP__/Show/msg'"><if condition="($auth eq 0)"><input type="button" value="admin panel" onclick="window.location.href='__APP__/Show/toAdmin'"></if>
-<br><br>
+<table class = "navigationBar">
+<tr>
+  <td>
+    <a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+  </td><td>
+    <a style="font-size:20" href="__APP__/Navigation/BB">Bulletinss Board</a>
+  </td><td>
+    <a style="font-size:20" href="">About Us</a>
+  </td>
+<tr>
+</table>
+
+<div class = "backgroundFrame">
+<div class = "iAKworkshop">
+	Admin Panel
+</div>
+
+<hr>
+<div class = "bbNav">
+    <a style="font-size:20" href="__APP__/Index/index">Bulletinss</a><{$pwd}> | <a  href="__APP__/Show/msg">Messages</a> | <if condition="($auth eq 0)"><a href="__APP__/Show/toAdmin">Admin Panel</a> |</if>  <a href="__APP__/Show/changepwd">Modify Password</a> | <a href="__APP__/Index/logout">Log Out</a> |
+</div>
+<hr>
+
+<div class = "mainFrame">
+
+<table class = "bulletins">
 <form name="banForm" method="post" action="__APP__/Show/findUserToBan">
 <tr>
-<td>
-User to be banned:
-</td>
-<td>
-<input class="text" type="text" name="userBan" id="userBan">
-</td>
-<td>
-<input type="submit" value="search">
+<td style = "text-align:center">
+<input class="text" type="text" name="userBan" id="userBan" placeholder="User Name to be banned"> 
+<input class = "bigBlueBtn" type="submit" value="search">
 </td>
 </form>
-<div id="ban">
-<table style="background-color:#ABD9E0;" name="ban table">
+</table>
+
+
+<div id="ban" class = "bulletins">
+<table class = "normalTable" name="banTable">
 <if condition="($exist eq 1)">
 <tr>
-<td>User Name</td>
-<td>operation</td>
+<th>User Name</th>
+<th>operation</th>
 </tr>
 <tr>
 <td><{$banUserId}></td>
 <if condition="($op eq 1)">
-<td><a href='__APP__/Post/banUser?userId=<{$banUserId}>'>Ban</a></td>
+<td><a class = "normalLink" href='__APP__/Post/banUser?userId=<{$banUserId}>'>Ban</a></td>
 </if>
 <if condition="($op eq 3)">
 <td>Already banned</td>
@@ -42,16 +65,18 @@ User to be banned:
 </tr>
 </if>
 <if condition="($exist eq 0)">
-<tr><td>No user named <{$banUserId}> found!</td></tr>
+<tr><td>No user named <span class="pp"><{$banUserId}></span> found!</td></tr>
 </if>
 </table>
 </div>
 
-<br><br>
-Banned User List:
-<br>
+<hr>
+
+
+<div style="margin-left:30px">Banned users List</div>
+<div class = "bulletins">
 <if condition="($banListEmpty eq 0)">
-<Table name="banList" style="background-color:#ABD9E0;" border=1>
+<Table name="banList" class = "normalTable">
 <tr>
 <td>User Name</td><td>operation</td>
 </tr>
@@ -59,12 +84,16 @@ Banned User List:
 <tr>
 <td><{$bl.id}></td>
 
-<td><a href="__APP__/Post/unban?userId=<{$bl.id}>">unban</a></td>
+<td><a class = "normalLink" href="__APP__/Post/unban?userId=<{$bl.id}>">unban</a></td>
 </volist>
 </Table>
 </if>
 <if condition="($banListEmpty eq 1)">
-<tr>Empty List</tr>
+<div style = "text-align:center;">Empty List</div>
 </if>
+</div>
+
+</div>
+</div>
 </body>
 </html>

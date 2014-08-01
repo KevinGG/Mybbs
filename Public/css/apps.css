@@ -1,0 +1,105 @@
+.backgroundFrame{
+	width:70%;
+	margin-left:15%;
+	margin-top:2%;
+	background-color:#C8C8C8;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.iAKworkshop{
+	text-align: center;
+	margin-top: -20px;
+	margin-bottom:20px;
+	font-family: "Curlz MT";
+	font-size: 40;
+	color:rgb(250,250,250);
+	font-style: bold;
+	text-shadow: 1px 1px gray;
+}
+
+.mainFrame{
+	width:98%;
+	margin-left:1%;
+	background-color:white; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.app{
+	width: 95%;
+	margin-left:2.5%;
+	background-color: rgb(250,250,250); 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding:20px;
+}
+
+.appIconTd{
+	width:120px;
+	text-align:center;
+}
+
+.appIcon{
+	width:100px;
+	height:100px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.appStatusIcon{
+	width:12px;
+	height:12px;
+}
+
+.info{
+	width:auto;
+	border-right:1px solid silver;
+}
+
+.info span{
+	color:gray;
+}
+
+.descriptionTd{
+	width:65%;
+}
+
+.description{
+	padding-left:20px;
+}
+
+
+.blueBtn{
+	width:auto;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	background-color: rgb(94,134,205);
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.grayBtn{
+	width:auto;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	background-color: gray;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+

@@ -2,32 +2,65 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/apps.css">
 <load href="__PUBLIC__/javascript/jquery-1.9.0.min.js"/>
 <load href="__PUBLIC__/javascript/Jfunctions.js"/>
 <title>Edit Page</title>
 </head>
 <body>
-<div class="container">
-<div class="header">EDIT</div>
-<div class="box2" style="margin-left:10px;">
+<table class = "navigationBar">
+<tr>
+  <td>
+    <a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+  </td><td>
+    <a style="font-size:20" href="__APP__/Navigation/BB">Bulletinss Board</a>
+  </td><td>
+    <a style="font-size:20" href="">About Us</a>
+  </td>
+<tr>
+</table>
+
+
+
+<div class="backgroundFrame">
+<div class = "iAKworkshop">
+  Modification
+</div>
+
+<hr>
+<div class = "bbNav">
+    <a style="font-size:20" href="__APP__/Index/index">Bulletinss</a><{$pwd}> | <a  href="__APP__/Show/msg">Messages</a> | <if condition="($auth eq 0)"><a href="__APP__/Show/toAdmin">Admin Panel</a> |</if>  <a href="__APP__/Show/changepwd">Modify Password</a> | <a href="__APP__/Index/logout">Log Out</a> |
+</div>
+<hr>
+
+<div class="mainFrame" style="margin-left:10px;">
+
+
+<div class = "bulletins">
 Original Text：</br>
+<div class = "pp">
 <volist name="nowcontent" id="nowcontent">
 <{$nowcontent.post_content}>
 <{$nowcontent.reply_content}>
 </volist>
 </div>
-<div class="box2" style="margin-left:10px;">
+</div>
+
+<hr style="width:0px">
+
+<div class = "bulletins">
 <form action="__APP__/Post/modify" method="post" onsubmit="return JcheckReplyContent('edittext','edittextck');">
 <textarea id="edittext" class="text" name="content" cols="50" rows="8" value=""></textarea>
 <span id="edittextck"><font color=red>*</font></span>
 <input type=hidden name="op" value="<{$op}>">
 <input type=hidden name="bbsid" value="<{$bbsid}>">
 </br>
-<input type="submit" value="Modify">
-<input type="button" onclick="window.location.href='__APP__/Show/main'" value="Return">
+<input class = "bigBlueBtn" type="submit" value="Modify">
+<input style = "float:right" class = "bigBlueBtn" type="button" onclick="window.location.href='__APP__/Show/main'" value="Cancel">
 </form>
 </div>
-<div class="footer">EDIT</div>
+
+</div>
 </div>
 </body>
 </html>

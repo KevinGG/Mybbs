@@ -10,12 +10,12 @@ class IndexAction extends Action
     public function index()
     {
         if(session('home_id') && trim(session('home_id'))!="1"){
-        session('home_crow',5);
-        session('home_pos',0);
-		$this->redirect("Show/main");
-		}
+            session('home_crow',5);
+            session('home_pos',0);
+		    $this->redirect("Show/main");
+		} 
 		else{
-		$this->redirect("Show/index");
+		    $this->redirect("Show/apps");
 		}
     }
 
