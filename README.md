@@ -1,9 +1,5 @@
-This is a web based bulletin broadcast system.
+This is a support website for APPs from iAK workshop with a self-made bulletin broadcast system.
 It uses html, css, javascript, php, mysql and an open source framework ThinkPHP.
 
-Visit Demo:
-
-mybbs.sinaapp.com
-
-
-For SAE platform's security issues, all database writing operation couldn't be tested in this demo (Of course including sign up). To login as admin, use "admin" & "123456".
+Visit this site at:
+www.iakworkshop.comuv.com
