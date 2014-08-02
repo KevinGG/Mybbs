@@ -16,7 +16,7 @@
 	</td><td>
 		<a style="font-size:20" href="__APP__/Navigation/BB">Bulletins Board</a>
 	</td><td>
-		<a style="font-size:20" href="">About Us</a>
+		<a style="font-size:20" href="__APP__/Navigation/AboutUs">About Us</a>
 	</td>
 <tr>
 </table>

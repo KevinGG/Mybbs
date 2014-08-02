@@ -16,6 +16,9 @@ class NavigationAction extends Action{
 		}
 	}
 
+	public function AboutUs(){
+		$this->redirect("Show/aboutUs");
+	}
 
 }
 
