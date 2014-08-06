@@ -35,7 +35,7 @@
 	<tr>
 		<td class = "appIconTd"><img class = "appIcon" src = "__PUBLIC__/img/Apps/GoBang.png"></td>
 		<td class = "info">
-			Version:<span>1.0</span> <br/> 
+			Version:<span>1.01</span> <br/> 
 			Price: <span>Free</span> <br/>
 			Status: <span>For Sale</span> <br/>
 			Platform: <span>iOS</span> <br/>
@@ -71,7 +71,7 @@
 		<td class = "info">
 			Version:<span>1.1</span> <br/> 
 			Price: <span>Free</span> <br/>
-			Status: <span>Waiting For Review</span> <br/>
+			Status: <span>For Sale</span> <br/>
 			Platform: <span>iOS</span> <br/>
 		</td>
 		<td class = "descriptionTd">
@@ -88,11 +88,11 @@
 	</tr>
 	<tr>
 		<td class = "appIconTd">
-			<img src = "__PUBLIC__/img/Apps/orange.png" class = "appStatusIcon">
+			<img src = "__PUBLIC__/img/Apps/green.png" class = "appStatusIcon">
 			Rainbow Crash
 		</td>
 		<td>
-			<span class ="GrayBtn"><a href="javascript:void(0);" target="_blank">View in App Store</a></span>
+			<span class ="blueBtn"><a href="https://itunes.apple.com/us/app/rainbow-crash/id903688862?ls=1&mt=8" target="_blank">View in App Store</a></span>
 		</td>
 	</tr>
 </table>

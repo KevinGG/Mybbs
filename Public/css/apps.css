@@ -43,7 +43,7 @@
 }
 
 .appIconTd{
-	width:120px;
+	width:auto;
 	text-align:center;
 }
 
@@ -67,6 +67,7 @@
 }
 
 .info span{
+	width:auto;
 	color:gray;
 }
 
