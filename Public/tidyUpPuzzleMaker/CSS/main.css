@@ -1,0 +1,55 @@
+.backgroundFrame{
+	width:70%;
+	margin-left:15%;
+	margin-top:2%;
+	background-color:#C8C8C8;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.iAKworkshop{
+	text-align: center;
+	margin-top: -20px;
+	margin-bottom:20px;
+	font-family: "Curlz MT";
+	font-size: 40;
+	color:rgb(250,250,250);
+	font-style: bold;
+	text-shadow: 1px 1px gray;
+}
+
+.mainFrame{
+	width:98%;
+	margin-left:1%;
+	background-color:white; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.item{
+	margin: 0 auto;
+}
+
+.blueBtn{
+	width:auto;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	background-color: rgb(100,150,216);
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	color:white;
+	font-size:14;
+}
+
+a {
+	text-decoration: none;
+}

@@ -14,10 +14,12 @@
 <tr>
   <td>
     <a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+    </td><td>
+    <a id ="tools" style="font-size:20" href="javascript:void(0);">Online Tools</a>
   </td><td>
     <a style="font-size:20" href="__APP__/Navigation/BB">Bulletinss Board</a>
   </td><td>
-    <a style="font-size:20" href="">About Us</a>
+    <a style="font-size:20" href="__APP__/Navigation/AboutUs">About Us</a>
   </td>
 <tr>
 </table>

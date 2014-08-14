@@ -9,6 +9,8 @@
 <tr>
 	<td>
 		<a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+		</td><td>
+		<a id ="tools" style="font-size:20" href="javascript:void(0);">Online Tools</a>
 	</td><td>
 		<a style="font-size:20" href="__APP__/Navigation/BB">Bulletins Board</a>
 	</td><td>
