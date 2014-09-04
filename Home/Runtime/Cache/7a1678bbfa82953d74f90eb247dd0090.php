@@ -9,17 +9,7 @@
 </head>
 
 <body>
-<table class = "navigationBar">
-<tr>
-	<td>
-		<a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
-	</td><td>
-		<a style="font-size:20" href="__APP__/Navigation/BB">Bulletins Board</a>
-	</td><td>
-		<a style="font-size:20" href="__APP__/Navigation/AboutUs">About Us</a>
-	</td>
-<tr>
-</table>
+<?php echo ($navigationBar); ?>
 
 <div class="backgroundFrame">
 <div class = "iAKworkshop">

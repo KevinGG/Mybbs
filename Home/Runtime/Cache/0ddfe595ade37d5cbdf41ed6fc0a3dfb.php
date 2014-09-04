@@ -8,17 +8,7 @@
 <title>Edit Page</title>
 </head>
 <body>
-<table class = "navigationBar">
-<tr>
-  <td>
-    <a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
-  </td><td>
-    <a style="font-size:20" href="__APP__/Navigation/BB">Bulletinss Board</a>
-  </td><td>
-    <a style="font-size:20" href="">About Us</a>
-  </td>
-<tr>
-</table>
+<?php echo ($navigationBar); ?>
 
 
 

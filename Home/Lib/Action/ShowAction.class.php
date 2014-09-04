@@ -9,11 +9,13 @@ private $auth;
 
  //登陆界面
  public function index(){
+ $this->navigationBar();
  $this->display(index);
  }
  
  //注册界面
  public function register(){
+ $this->navigationBar();
  $this->display(register);
  }
 
@@ -38,6 +40,7 @@ private $auth;
  public function changepwd(){
  $id=session('home_id');
  $this->assign('id',$id);
+ $this->navigationBar();
  $this->display(changepwd);
  }
  
@@ -93,6 +96,7 @@ private $auth;
  $this->assign('crow',$crow);
  $this->assign('pos',session('home_pos'));
 // $this->assign('pwd',session("home_pwd"));
+ $this->navigationBar();
  $this->display(main);
  }
 
@@ -114,6 +118,7 @@ private $auth;
  $this->assign('nowcontent',$re); 
  $this->assign("op","post");
  $this->assign("bbsid",$post_id);
+ $this->navigationBar();
  $this->display(modify);
  }
 
@@ -135,6 +140,7 @@ private $auth;
  $this->assign('nowcontent',$re); 
  $this->assign("op","reply");
  $this->assign("bbsid",$reply_id);
+ $this->navigationBar();
  $this->display(modify);
  }
 //动态加载
@@ -188,6 +194,7 @@ private $auth;
 	else{
 	  $this->assign('banListEmpty',1);
 	}
+	$this->navigationBar();
 	$this->display(admin);
    }
 
@@ -226,6 +233,7 @@ private $auth;
 		else{
 			$this->assign('banListEmpty',1);
 		}
+		$this->navigationBar();
 		$this->display(admin);
 	}
 
@@ -248,6 +256,7 @@ private $auth;
 		}
 		//var_dump($msgList);
 		$this->assign('msgList',$msgList);
+		$this->navigationBar();
 		$this->display(msg);
 	}
 
@@ -262,8 +271,49 @@ private $auth;
 	   else{
 	      alertError("Fail to read!");
 	   }
+	   $this->navigationBar();
 	   $this->display(readMsg);
 	}
+
+
+
+
+
+//navigation Bar action added
+	public function apps(){
+		$this->navigationBar();
+		$this->display(apps);
+	}
+
+
+	public function aboutUs(){
+		$this->navigationBar();
+		$this->display(aboutUs);
+	}
+
+	public function navigationBar(){
+		$navigationBar = '<table class = "navigationBar">
+								<tr>
+									<td>
+										<a style="font-size:20" href="__APP__/Navigation/APP">App Workshop</a>
+									</td><td>
+										<a style="font-size:20" href="__APP__/Navigation/BB">Bulletins Board</a>
+									</td><td>
+										<a style="font-size:20" href="http://iakblog.net78.net" target = "_blank">Blog</a>
+									</td><td>
+										<a id ="tools" target = "_blank" style="font-size:20" href="__PUBLIC__/tidyUpPuzzleMaker/index.html">Online Tools</a>
+									</td><td>
+										<a style="font-size:20" href="__APP__/Navigation/AboutUs">About Us</a>
+									</td>
+								<tr>
+						  </table>';
+		$this->assign('navigationBar', $navigationBar);
+
+	}
+
 }
+
+
+
 
 ?>
