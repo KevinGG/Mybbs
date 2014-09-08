@@ -70,7 +70,7 @@
 	</tr>
 	<tr>
 		<td class = "appIconTd">
-			<a href="" target = "_blank"><img class = "socialNetworkIcon" src="__PUBLIC__/img/Members/in.png"></a> 
+			<a href="https://www.linkedin.com/pub/xiaonan-wang/6b/37/606" target = "_blank"><img class = "socialNetworkIcon" src="__PUBLIC__/img/Members/in.png"></a> 
 
 			<a href = "" target = "_blank"><img class = "socialNetworkIcon" src = "__PUBLIC__/img/Members/github.png"></a>
 
