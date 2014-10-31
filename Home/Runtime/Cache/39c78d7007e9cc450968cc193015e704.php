@@ -59,7 +59,11 @@
 		<td class = "info"></td>
 		<td class = "descriptionTd">
 			<div class = "description">
-
+			Love novels. Harry Potter is my favorite.<br/>
+			Love cooking. Cheese cakes and Chinese food are my best dishes.<br/>
+			Love exercising. Love outdoor sports.<br/>
+			Love animals. Especially dogs.<br/>
+			Love smiling.<br/>
 			</div>
 		</td>
 	</tr>
