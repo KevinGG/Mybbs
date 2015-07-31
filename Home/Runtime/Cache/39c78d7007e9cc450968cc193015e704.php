@@ -16,7 +16,7 @@
 <div class = "mainFrame">
 <table class = "app" >
 	<tr>
-		<td class = "appIconTd"><img class = "avartarIcon" src = "__PUBLIC__/img/Members/NingKang.jpg"></td>
+		<td class = "appIconTd"><img class = "avartarIcon" src = "__PUBLIC__/img/Members/NingKang_md.png"></td>
 		<td class = "info"></td>
 		<td class = "descriptionTd" style = "font-size:13">
 			<div class = "description">
@@ -55,7 +55,7 @@
 
 <table class = "app" >
 	<tr>
-		<td class = "appIconTd"><img class = "avartarIcon" src = "__PUBLIC__/img/Members/XiaonanWang.jpg"></td>
+		<td class = "appIconTd"><img class = "avartarIcon" src = "__PUBLIC__/img/Members/XiaonanWang_md.png"></td>
 		<td class = "info"></td>
 		<td class = "descriptionTd">
 			<div class = "description">
