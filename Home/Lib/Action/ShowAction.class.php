@@ -299,6 +299,8 @@ private $auth;
 									</td><td>
 										<a style="font-size:20" href="__APP__/Navigation/BB">Bulletins Board</a>
 									</td><td>
+										<a target="_blank" style="font-size:20" href="http://www.xiaonanwang.com">Blog</a>
+									</td><td>
 										<a id ="tools" target = "_blank" style="font-size:20" href="__PUBLIC__/tidyUpPuzzleMaker/index.html">Online Tools</a>
 									</td><td>
 										<a style="font-size:20" href="__APP__/Navigation/AboutUs">About Us</a>
