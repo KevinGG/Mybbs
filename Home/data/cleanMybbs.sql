@@ -135,3 +135,9 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2014-07-29 11:32:58
+
+-- Grant a user with full privileges to this database
+CREATE USER 'mybbsAdmin'@'localhost' IDENTIFIED BY 'mybbs123456';
+GRANT ALL privileges ON *.* TO 'mybbsAdmin'@'localhost'  WITH GRANT OPTION;
+CREATE USER 'mybbsAdmin'@'%' IDENTIFIED BY 'mybbs123456';
+GRANT ALL privileges ON *.* TO 'mybbsAdmin'@'%' WITH GRANT OPTION;
